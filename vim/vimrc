@@ -1,0 +1,42 @@
+    set nocompatible
+"Plugins
+call plug#begin('~/.vim/plugged')
+    Plug 'jiangmiao/auto-pairs'
+    Plug 'ervandew/supertab'
+    Plug 'vim-syntastic/syntastic'
+call plug#end()
+
+"Colors
+colorscheme badwolf
+syntax enable 
+
+"Tabs & Spaces
+set expandtab    "tabs are spaces
+set tabstop=4    "number of visual spaces per tab
+set softtabstop=4    "number of spaces in tab when editing
+set backspace=2 "make backspace work like most other programs
+set shiftround
+set shiftwidth=4
+
+"UI Config
+set number    "show line numbers
+set relativenumber    "show numbers relative to current line
+set ruler  " show cursor position   
+set showcmd    "show last command in bottom bar
+set cursorline    "highlight current lin
+filetype indent on    "load filetype-specific indent file
+set wildmenu    "visual autocomplete for command menu
+set lazyredraw
+set showmatch   "highlight matching brackets
+
+"Search
+set incsearch    "search as characters are entered
+set hlsearch
+set path +=**    "Provides tab-completion for all file-related tasks
+
+"Mapping
+inoremap kj <esc>
+inoremap KJ <esc>
+vnoremap kj <esc>
+vnoremap KJ <esc>
+

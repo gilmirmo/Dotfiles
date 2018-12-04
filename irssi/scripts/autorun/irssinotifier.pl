@@ -1,0 +1,1 @@
+/home/pi/.irssi/scripts/irssinotifier.pl

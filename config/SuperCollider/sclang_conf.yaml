@@ -1,0 +1,7 @@
+includePaths:
+    -   /home/gilmirmo/.local/share/SuperCollider/downloaded-quarks/Vowel
+    -   /home/gilmirmo/.local/share/SuperCollider/downloaded-quarks/Dirt-Samples
+    -   /home/gilmirmo/.local/share/SuperCollider/downloaded-quarks/SuperDirt
+excludePaths:
+    []
+postInlineWarnings: false

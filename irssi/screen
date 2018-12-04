@@ -1,0 +1,9 @@
+#! /bin/bash
+
+if screen -list | grep "\.irssi" > /dev/null
+then
+    screen -Rx irssi
+else
+    screen -S irssi -t irssi irssi
+fi
+
