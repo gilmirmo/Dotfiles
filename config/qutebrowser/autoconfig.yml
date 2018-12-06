@@ -5,9 +5,16 @@ config_version: 2
 settings:
   backend:
     global: webengine
+  content.autoplay:
+    global: false
   content.headers.user_agent:
     global: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko)
       Chrome/58.0.3029.110 Safari/537.36
+  content.host_blocking.lists:
+    global:
+    - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+  downloads.location.directory:
+    global: ~/Downloads
   editor.encoding:
     global: utf-8
   fonts.completion.category:
@@ -19,9 +26,9 @@ settings:
   fonts.downloads:
     global: 10pt DejaVu
   fonts.hints:
-    global: bold 10pt DejaVu
+    global: bold 12pt DejaVu
   fonts.keyhint:
-    global: 10pt DejaVu
+    global: 12pt DejaVu
   fonts.messages.error:
     global: 10pt DejaVu
   fonts.messages.info:
@@ -39,5 +46,7 @@ settings:
     global: true
   spellcheck.languages:
     global: null
+  tabs.background:
+    global: true
   zoom.default:
-    global: 75%
+    global: 90%
