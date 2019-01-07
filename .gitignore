@@ -1,7 +1,8 @@
-.config/spotify
-config/spotify
-.config/Optolyth
-config/Optolyth
+*config/spotify
+*config/chromium
+*config/SuperCollider
+*config/Optolyth
+vim/plugged/*
 .ssh
 .gitconfig
 

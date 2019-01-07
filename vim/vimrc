@@ -1,13 +1,13 @@
-    set nocompatible
+set nocompatible
+
 "Plugins
 call plug#begin('~/.vim/plugged')
-    Plug 'jiangmiao/auto-pairs'
-    Plug 'ervandew/supertab'
-    Plug 'vim-syntastic/syntastic'
+    Plug 'jiangmiao/auto-pairs' "pairing paranthesese
+    Plug 'ervandew/supertab' "tab completion
 call plug#end()
 
 "Colors
-colorscheme badwolf
+colorscheme snazzy
 syntax enable 
 
 "Tabs & Spaces
@@ -39,4 +39,3 @@ inoremap kj <esc>
 inoremap KJ <esc>
 vnoremap kj <esc>
 vnoremap KJ <esc>
-

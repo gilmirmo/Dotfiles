@@ -18,35 +18,63 @@ settings:
   editor.encoding:
     global: utf-8
   fonts.completion.category:
-    global: bold 10pt DejaVu
+    global: bold 8pt DejaVu
   fonts.completion.entry:
-    global: 10pt DejaVu
+    global: 8pt DejaVu
   fonts.debug_console:
-    global: 10pt DejaVu
+    global: 8pt DejaVu
   fonts.downloads:
-    global: 10pt DejaVu
+    global: 8pt DejaVu
   fonts.hints:
-    global: bold 12pt DejaVu
+    global: bold 8pt DejaVu
   fonts.keyhint:
-    global: 12pt DejaVu
+    global: 8pt DejaVu
   fonts.messages.error:
-    global: 10pt DejaVu
+    global: 8pt DejaVu
   fonts.messages.info:
-    global: 10pt DejaVu
+    global: 8pt DejaVu
   fonts.messages.warning:
-    global: 10pt DejaVu
+    global: 8pt DejaVu
+  fonts.prompts:
+    global: 8pt sans-serif
   fonts.statusbar:
-    global: 10pt DejaVu
+    global: 8pt DejaVu
   fonts.tabs:
-    global: 10pt DejaVu
+    global: 8pt DejaVu
   qt.args:
     global:
     - ppapi-widevine-path=/usr/lib/qt/plugins/ppapi/libwidevinecdmadapter.so
   qt.highdpi:
     global: true
   spellcheck.languages:
-    global: null
+    global:
+    - en-US
+    - de-DE
+    - fa-IR
   tabs.background:
     global: true
+  url.incdec_segments:
+    global:
+    - path
+    - query
+  url.open_base_url:
+    global: false
+  url.searchengines:
+    global:
+      DEFAULT: https://duckduckgo.com/?q={}
+  url.start_pages:
+    global: https://start.duckduckgo.com
+  url.yank_ignored_parameters:
+    global:
+    - ref
+    - utm_source
+    - utm_medium
+    - utm_campaign
+    - utm_term
+    - utm_content
+  window.hide_decoration:
+    global: false
+  window.title_format:
+    global: '{perc}{title}{title_sep}qutebrowser'
   zoom.default:
-    global: 90%
+    global: 75%
