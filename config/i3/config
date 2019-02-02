@@ -206,7 +206,7 @@ bar {
 exec feh --bg-scale '/home/gilmirmo/Pictures/Wallpapers/wallhaven.jpg' 
 
 #Compton
- exec --no-startup-id compton
+# exec --no-startup-id compton
 
 #Display
 #exec xset s off -dpms
