@@ -4,11 +4,16 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
     Plug 'jiangmiao/auto-pairs' "pairing paranthesese
     Plug 'ervandew/supertab' "tab completion
+    Plug 'itchyny/lightline.vim' "beautiful line
 call plug#end()
 
 "Colors
 colorscheme snazzy
-syntax enable 
+syntax enable
+set laststatus=2
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
 
 "Tabs & Spaces
 set expandtab    "tabs are spaces
@@ -19,6 +24,7 @@ set shiftround
 set shiftwidth=4
 
 "UI Config
+set noshowmode "lightline already shows stuff
 set number    "show line numbers
 set relativenumber    "show numbers relative to current line
 set ruler  " show cursor position   
