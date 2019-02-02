@@ -203,7 +203,7 @@ bar {
 #####Custom settings#####
 
 #Wallpaper
-exec feh --bg-scale '/home/gilmirmo/Pictures/Wallpapers/wallhaven.jpg' 
+exec feh --bg-scale '/home/gilmirmo/Pictures/Wallpapers/minimal_deer.jpg'
 
 #Compton
 # exec --no-startup-id compton
