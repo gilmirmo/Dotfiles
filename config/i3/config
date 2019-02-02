@@ -203,13 +203,10 @@ bar {
 #####Custom settings#####
 
 #Wallpaper
-exec feh --bg-scale '/home/gilmirmo/Pictures/Wallpapers/boathouse-cottage-dock.jpg' 
+exec feh --bg-scale '/home/gilmirmo/Pictures/Wallpapers/wallhaven.jpg' 
 
 #Compton
-# exec --no-startup-id compton
-
-#Bluetooth
-exec bluetoothctl power on
+ exec --no-startup-id compton
 
 #Display
 #exec xset s off -dpms
@@ -242,11 +239,10 @@ mode "$mode_system" {
 bindsym $mod+End mode "$mode_system"
 
 #Window Borders
-#default_border pixel 5
+default_border pixel 5
 #hide_edge_borders smart
 
 # gaps
 gaps inner 5
 gaps outer 5
-# smart gaps
 #smart_gaps on
