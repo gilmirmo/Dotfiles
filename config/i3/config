@@ -22,9 +22,10 @@ set $launcher dmenu_run
 set $browser qutebrowser
 
 # power commands
-set $shutdown sudo -A shutdown -h now                                                      
-set $reboot sudo -A reboot
-set $netrefresh --no-startup-id sudo -A systemctl restart NetworkManager
+set $shutdown shutdown -h now
+set $reboot reboot
+set $netrefresh systemctl restart NetworkManager
+set $lock slock
 set $hibernate sudo -A systemctl suspend
 
 
@@ -197,7 +198,7 @@ font pango:DejaVu Sans Mono 8
     # reboot
     bindsym $mod+BackSpace exec --no-startup-id prompt "Reboot system?" "$reboot"
     # lockscreen
-    bindsym $mod+End exec --no-startup-id slock
+    bindsym --release $mod+End exec --no-startup-id $lock
     
 #
 # Autostart:
@@ -207,5 +208,7 @@ font pango:DejaVu Sans Mono 8
     # nightlight
     exec redshift
     exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
+    # clipboard
+    exec clipmenud
     # make pointer disappear when typing
     exec xbanish
