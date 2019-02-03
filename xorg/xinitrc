@@ -1,5 +1,4 @@
 xrdb -merge ~/.Xresources
-xbanish &
 udiskie -t &
 
 [[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
