@@ -106,7 +106,12 @@ font pango:DejaVu Sans Mono 8
 #
 # Move around:
 #
+    # mouse
     focus_follows_mouse no
+    # focus the parent container
+    bindsym $mod+Shift+a focus parent
+    # focus the child container
+    bindsym $mod+a focus child
 
     # move around focus
     bindsym $mod+$left focus left
@@ -131,15 +136,15 @@ font pango:DejaVu Sans Mono 8
     bindsym $mod+Shift+Right move right
 
     # resize window
-   #bindsym $mod+Ctrl+$left exec --no-startup-id i3resize left
-   #bindsym $mod+Ctrl+$down exec --no-startup-id i3resize down
-   #bindsym $mod+Ctrl+$up exec --no-startup-id i3resize up
-   #bindsym $mod+Ctrl+$right exec --no-startup-id i3resize right
-   ## with arrow keys
-   #bindsym $mod+Ctrl+Left exec --no-startup-id i3resize left
-   #bindsym $mod+Ctrl+Down exec --no-startup-id i3resize down
-   #bindsym $mod+Ctrl+Up exec --no-startup-id i3resize up
-   #bindsym $mod+Ctrl+Right exec --no-startup-id i3resize right
+   bindsym $mod+Ctrl+$left exec --no-startup-id i3resize left
+   bindsym $mod+Ctrl+$down exec --no-startup-id i3resize down
+   bindsym $mod+Ctrl+$up exec --no-startup-id i3resize up
+   bindsym $mod+Ctrl+$right exec --no-startup-id i3resize right
+   # with arrow keys
+   bindsym $mod+Ctrl+Left exec --no-startup-id i3resize left
+   bindsym $mod+Ctrl+Down exec --no-startup-id i3resize down
+   bindsym $mod+Ctrl+Up exec --no-startup-id i3resize up
+   bindsym $mod+Ctrl+Right exec --no-startup-id i3resize right
 
 #
 # Wokspaces:
