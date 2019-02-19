@@ -116,7 +116,7 @@ fi
 # custom
 source <(complete setup bash)
 ENABLE_CORRECTION="true"
-alias uni="cd ~/documents/University"
+alias uni="cd ~/Documents/University"
 alias ra="ranger"
 alias pls='sudo $(fc -ln -1)'
 alias irc="screen -dr irssi"
