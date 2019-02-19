@@ -19,7 +19,7 @@ set $term kitty
 set $launcher dmenu_run
 
 # browser
-set $browser qutebrowser
+set $browser chromium --app=https://www.google.com
 
 # power commands
 set $shutdown shutdown -h now
@@ -98,6 +98,11 @@ font pango:DejaVu Sans Mono 8
     bindcode 122 exec amixer -q set Master 5%-
     bindcode 123 exec amixer -q set Master 5%+
     bindcode 121 exec amixer -q set Master toggle
+
+    # Media Control (/ . ,)
+    bindcode $mod+61 exec playerctl play-pause
+    bindcode $mod+60 exec playerctl next
+    bindcode $mod+59 exec playerctl previous
 
     # Brightness up/down
     bindcode 232 exec brightnessctl set 5%-
