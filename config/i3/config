@@ -19,7 +19,7 @@ set $term kitty
 set $launcher dmenu_run
 
 # browser
-set $browser chromium --app=https://www.google.com
+set $browser chromium 
 
 # power commands
 set $shutdown shutdown -h now
@@ -32,7 +32,7 @@ set $hibernate sudo -A systemctl suspend
 ### Appearance
 #
 # Wallpaper
-exec feh --bg-scale '/home/gilmirmo/.config/wall.jpg' 
+exec feh --bg-scale '/home/gilmirmo/.config/i3/wal.jpg' 
 # Font
 font pango:DejaVu Sans Mono 8
 
@@ -61,6 +61,17 @@ font pango:DejaVu Sans Mono 8
 #
 # Borders & Gaps:
 #
+    # colors
+    # class                 border  backgr. text    indicator child_border
+    client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
+    client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+    client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+    client.urgent           #2f343a #900000 #ffffff #900000   #900000
+    client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
+
+
     # window borders
     default_border pixel 5
 
@@ -77,7 +88,8 @@ font pango:DejaVu Sans Mono 8
     bindsym $mod+Return exec $term
     
     # Open browser
-    bindsym $mod+w exec $browser
+    bindsym $mod+w exec $browser --app=https://www.google.com
+    bindsym $mod+Shift+w exec $browser 
     
     # Initiate launcher
     bindsym $mod+space exec $launcher
@@ -194,7 +206,7 @@ font pango:DejaVu Sans Mono 8
     bindsym $mod+f fullscreen
 
     # toggle between tiling and floating
-    bindsym $mod+Shift+t floating toggle
+    bindsym $mod+Shift+space floating toggle
     # swap focus between the tiling area and the floating area
     bindsym $mod+t mode_toggle
 
@@ -213,12 +225,18 @@ font pango:DejaVu Sans Mono 8
 #
 # Autostart:
 #
-    # compositor
-    #exec --no-startup-id compton
-    # nightlight
-    exec redshift
+    # messengers
+    exec --no-sturtup-id i3-msg "workspace 10; exec chromium --app=https://messages.android.com/"
+    exec --no-sturtup-id i3-msg "workspace 10; exec chromium --app=https://discordapp.com/channels/@me"
+    exec --no-sturtup-id i3-msg "workspace 10; exec chromium --app=https://web.telegram.com/"
+
+    # music
+#    assign [class="Spotify"] 9
+    exec --no-sturtup-id i3-msg 'workspace 9; exec spotify'
+
+    # background tools
+    #exec --no-startup-id compton #compositor
+    exec --no-startup-id redshift #red shift based on location
     exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
-    # clipboard
-    exec clipmenud
-    # make pointer disappear when typing
-    exec xbanish
+    exec --no-startup-id clipmenud #clipboard
+    exec --no-startup-id xbanish # make pointer disappear when typing
