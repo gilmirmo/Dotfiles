@@ -93,6 +93,10 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # Alias definitions.
+alias uni="cd ~/Documents/University"
+alias ra="ranger"
+alias pls='sudo $(fc -ln -1)'
+alias irc="screen -dr irssi"
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
@@ -116,7 +120,7 @@ fi
 # custom
 source <(complete setup bash)
 ENABLE_CORRECTION="true"
-alias uni="cd ~/Documents/University"
-alias ra="ranger"
-alias pls='sudo $(fc -ln -1)'
-alias irc="screen -dr irssi"
+set -o vi
+
+# Import colorscheme from 'wal'
+source "$HOME/.cache/wal/colors.sh"

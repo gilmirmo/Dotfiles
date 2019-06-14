@@ -2,18 +2,26 @@ set nocompatible
 
 "Plugins
 call plug#begin('~/.vim/plugged')
-    Plug 'jiangmiao/auto-pairs' "pairing paranthesese
+    Plug 'dylanaraps/wal' "wal colorscheme
+    Plug 'itchyny/lightline.vim' "lightline
+    Plug 'scrooloose/nerdtree' "file tree view
+    Plug 'tpope/vim-eunuch' "inclusion of core Unix commands
     Plug 'ervandew/supertab' "tab completion
-    Plug 'itchyny/lightline.vim' "beautiful line
+    Plug 'terryma/vim-multiple-cursors' "multiple cursors
+    Plug 'tpope/vim-surround' "editing brackets etc.
+    Plug 'mattn/emmet-vim' "completion tool for HTML, CSS, JavaScript
+    Plug 'w0rp/ale' "Lint engine
+
+    "Plug 'jiangmiao/auto-pairs' "pairing paranthesese
 call plug#end()
 
+
 "Colors
-colorscheme snazzy
+colorscheme wal
 syntax enable
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 set laststatus=2
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ }
+let g:lightline = {'colorscheme': 'jellybeans'}
 
 "Tabs & Spaces
 set expandtab    "tabs are spaces
@@ -42,6 +50,9 @@ set path +=**    "Provides tab-completion for all file-related tasks
 
 "Mapping
 inoremap kj <esc>
-inoremap KJ <esc>
 vnoremap kj <esc>
-vnoremap KJ <esc>
+map <C-o> :NERDTreeToggle<CR>
+
+"Linter
+let b:ale_fixers = ['eslint']
+let b:ale_fix_on_save = 1

@@ -32,10 +32,28 @@ set $hibernate sudo -A systemctl suspend
 ### Appearance
 #
 # Wallpaper
-exec feh --bg-scale '/home/gilmirmo/.config/i3/wal.jpg' 
+#exec feh --bg-scale '/home/gilmirmo/.config/i3/wal.jpg' 
+exec wal -R
 # Font
 font pango:DejaVu Sans Mono 8
 
+# Color
+    # Set colors from Xresources
+    # Change 'color7' and 'color2' to whatever colors you want i3 to use
+    # from the generated scheme.
+    # NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
+    # it fails to get colors from Xresources for some reason.
+    set_from_resource $fg i3wm.color7 #f0f0f0
+    set_from_resource $bg i3wm.color2 #f0f0f0
+
+    set_from_resource $c0 i3wm.color0 #f0f0f0
+    set_from_resource $c1 i3wm.color1 #f0f0f0
+    set_from_resource $c2 i3wm.color2 #f0f0f0
+    set_from_resource $c3 i3wm.color3 #f0f0f0
+    set_from_resource $c4 i3wm.color4 #f0f0f0
+    set_from_resource $c5 i3wm.color5 #f0f0f0
+    set_from_resource $c6 i3wm.color6 #f0f0f0
+    set_from_resource $c7 i3wm.color7 #f0f0f0
 #
 # Bar:
 #
@@ -61,16 +79,14 @@ font pango:DejaVu Sans Mono 8
 #
 # Borders & Gaps:
 #
-    # colors
     # class                 border  backgr. text    indicator child_border
-    client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
+    client.focused          #4c7899 $c3     #ffffff $c4       $c2
     client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
     client.unfocused        #333333 #222222 #888888 #292d2e   #222222
     client.urgent           #2f343a #900000 #ffffff #900000   #900000
     client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
-client.background       #ffffff
-
+    client.background       #ffffff
 
     # window borders
     default_border pixel 5
@@ -92,7 +108,7 @@ client.background       #ffffff
     bindsym $mod+Shift+w exec $browser 
     
     # Initiate launcher
-    bindsym $mod+space exec $launcher
+    bindsym $mod+space exec $launcher #-nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg"
 
     # kill focused window
     bindsym $mod+q kill

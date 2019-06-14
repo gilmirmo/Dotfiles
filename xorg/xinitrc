@@ -1,10 +1,10 @@
 xrdb -merge ~/.Xresources
 udiskie -t &
-
 [[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
 
 dbus-update-activation-environment --systemd DISPLAY
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
 
+wal -i "$(< "${HOME}/.cache/wal/wal")"
 exec i3
