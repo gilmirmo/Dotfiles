@@ -122,5 +122,3 @@ source <(complete setup bash)
 ENABLE_CORRECTION="true"
 set -o vi
 
-# Import colorscheme from 'wal'
-source "$HOME/.cache/wal/colors.sh"

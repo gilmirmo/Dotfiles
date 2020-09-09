@@ -1,5 +1,2 @@
-export PATH+=":$HOME/.bin/:$HOME/.scripts/:$HOME/.cargo/bin"
+export PATH+=":$HOME/.bin/:$HOME/.scripts/:$HOME/
 export EDITOR="vim"
-export TERMIINAL="kitty"
-export BROWSER="chromium"
-export READER="zathura"

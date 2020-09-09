@@ -17,7 +17,7 @@ call plug#end()
 
 
 "Colors
-colorscheme wal
+colorscheme snazzy
 syntax enable
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 set laststatus=2
